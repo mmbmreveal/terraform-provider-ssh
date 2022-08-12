@@ -32,6 +32,14 @@ func dataSourceSSHTunnel() *schema.Resource {
 					return user.Current()
 				},
 			},
+			"description": {
+				Type:        schema.TypeString,
+				Optional:    true,
+				Description: "description",
+				DefaultFunc: func() (interface{}, error) {
+					return "", nil
+				},
+			},
 			"auth": {
 				Type:        schema.TypeList,
 				Optional:    true,
