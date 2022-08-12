@@ -7,7 +7,7 @@ import (
 func SSHProvider() *schema.Provider {
 	return &schema.Provider{
 		Schema: map[string]*schema.Schema{},
-		DataSourcesMap: map[string]*schema.Resource{
+		ResourcesMap: map[string]*schema.Resource{
 			"ssh_tunnel": dataSourceSSHTunnel(),
 		},
 	}
